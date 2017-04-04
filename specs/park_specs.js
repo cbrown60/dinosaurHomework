@@ -26,6 +26,11 @@ describe('Park', function () {
   assert.strictEqual(0, park.enclosure.length)
   }),
 
-
+  it('can remove dinosaur by type', function(){
+  park.addDinosaur(dinosaur)
+  var dinosaur2 = new Dinosaur("diplodocus", 6)
+  park.removeDinosaur(dinosaur2)
+  assert.strictEqual(1, park.enclosure.length)
+  })
  
 })
